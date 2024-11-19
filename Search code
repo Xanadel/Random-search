@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Website Finder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            margin-top: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Random Website Finder!</h1>
+    <p>Click the button below to explore a random website on the internet.</p>
+    <button id="randomButton">Take Me Somewhere!</button>
+
+    <footer>
+        <p>Built with ❤ by [Xana]</p>
+    </footer>
+
+    <script>
+        const randomSites = [
+            "https://www.wikipedia.org/",
+            "https://www.reddit.com/r/random/",
+            "https://www.stumbleupon.com/",
+            "https://theuselessweb.com/",
+            "https://www.boredpanda.com/",
+            "https://thisisthenew.cabbage.store/",
+            "https://map.norsecorp.com/",
+        ];
+
+        document.getElementById("randomButton").addEventListener("click", () => {
+            const randomIndex = Math.floor(Math.random() * randomSites.length);
+            const randomSite = randomSites[randomIndex];
+            window.location.href = randomSite;
+        });
+    </script>
+</body>
+</html>
